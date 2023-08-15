@@ -1,23 +1,17 @@
-import { StatusBar } from 'expo-status-bar';
-import { useState } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import uuid from 'react-native-uuid';
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import MyBottomTabs from './app/navigation/BottomTabs';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { SafeAreaView } from 'react-native';
 
 export default function App() {
-  const [id, setId] = useState(uuid.v4())
   return (
-    <View style={styles.container}>
-      <Text>{id}</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaProvider>
+      <SafeAreaView style={{ flex: 1, paddingTop: 30 }}>
+        <NavigationContainer>
+          <MyBottomTabs />
+        </NavigationContainer>
+      </SafeAreaView>
+    </SafeAreaProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
