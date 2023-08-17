@@ -14,7 +14,7 @@ export default function IdScreen() {
     };
 
     return (
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#fff' }}>
+        <View className="flex-1 items-center justify-center bg-white">
             <Text>USER ID:</Text>
             <Text>{id}</Text>
             <Button icon="content-copy" mode="contained" onPress={copyToClipboard}>

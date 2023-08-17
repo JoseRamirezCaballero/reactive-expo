@@ -13,7 +13,7 @@ export default function PostsScreen() {
 
     const { open } = state;
     return (
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#fff' }}>
+        <View className="flex-1 items-center justify-center bg-white">
             <FAB.Group
                 open={open}
                 visible
